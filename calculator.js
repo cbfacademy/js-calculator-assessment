@@ -19,14 +19,10 @@ class Calculator {
       const calculator = this;
   
       document.addEventListener("keydown", function (event) {
-        let digitPattern = /[0-9]/g;
+        let symbolPattern = /[0-9.]/g;
         let operatorPattern = /[+\-*\/]/g;
   
-        if (event.key.match(digitPattern)) {
-          event.preventDefault();
-          calculator.appendSymbol(event.key);
-        }
-        if (event.key === ".") {
+        if (event.key.match(symbolPattern)) {
           event.preventDefault();
           calculator.appendSymbol(event.key);
         }
