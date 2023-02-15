@@ -42,7 +42,7 @@ class Calculator {
         event.preventDefault();
         calculator.deleteSymbol();
       }
-      if (event.key === "Delete") {
+      if (event.key === "Delete" || event.key === "Escape") {
         event.preventDefault();
         calculator.clear();
       }
