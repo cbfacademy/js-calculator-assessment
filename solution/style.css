@@ -9,6 +9,7 @@
 body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(to right, #cbce91ff, #ea738dff);
 }
 
 form {
@@ -23,7 +24,7 @@ form {
 form > button {
   cursor: pointer;
   font-size: 2rem;
-  border: 1px solid #ffffff;
+  border: 1px, solid #ffffff;
   outline: none;
 }
 
@@ -33,12 +34,13 @@ form > button:hover {
 
 .x2 {
   grid-column: span 2;
+  color: #adf802;
+  background-color: rgba(139, 0, 139, 0.8);
 }
 
 .display {
   grid-column: 1 / -1;
-  background-color: #cccccc;
-  border: 1px solid #ffffff;;
+  background-color: rgba(0, 0, 0, 0.75);
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
@@ -49,9 +51,11 @@ form > button:hover {
 }
 
 .display .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
   font-size: 1.5rem;
 }
 
 .display .current-operand {
+  color: white;
   font-size: 2.5rem;
 }
