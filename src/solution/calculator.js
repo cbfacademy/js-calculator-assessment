@@ -2,6 +2,8 @@
  * Represents a calculator
  */
 class Calculator {
+  #emitRefresh;
+  
   /**
    * Initialises an instance
    * @constructor
