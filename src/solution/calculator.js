@@ -1,9 +1,25 @@
+/**
+ * Represents a calculator
+ */
 class Calculator {
+  /**
+   * Initialises an instance
+   * @constructor
+   * @param {function} emitRefresh A callback function to be executed when the display UI needs to be refreshed
+   */
   constructor(emitRefresh) {
     this.#emitRefresh = emitRefresh;
     this.clearDisplay();
   }
 
+  // Private methods
+
+  /**
+   * Formats a numeric value for display
+   * @param {number} number 
+   * @returns {string} Formatted value
+   * @private
+   */
   #format(number) {
     const numericString = number.toString();
     const integerDigits = parseFloat(numericString.split(".")[0]);
@@ -25,6 +41,11 @@ class Calculator {
     }
   }
 
+  /**
+   * Returns the data needed to update the display UI
+   * @returns {object} An object containing the previous and current operands
+   * @private
+   */
   #getDisplayData() {
     const currentOperand = this.#format(this.currentOperand);
     const previousOperand =
@@ -37,10 +58,17 @@ class Calculator {
     };
   }
 
+  /**
+   * Fires the refresh callback to enable the display UI to be updated
+   * @private
+   */
   #refreshDisplay() {
     this.#emitRefresh(this.#getDisplayData())
   }
 
+  /**
+   * Calculates the result based on the current operator and operands
+   */
   calculate() {
     let result;
     const prev = parseFloat(this.previousOperand);
@@ -72,6 +100,9 @@ class Calculator {
     this.#refreshDisplay();
   }
 
+  /**
+   * Clears the display data
+   */
   clearDisplay() {
     this.currentOperand = "";
     this.previousOperand = "";
@@ -79,11 +110,18 @@ class Calculator {
     this.#refreshDisplay();
   }
 
+  /**
+   * Deletes a symbol from the current operand
+   */
   deleteSymbol() {
     this.currentOperand = this.currentOperand.toString().slice(0, -1);
     this.#refreshDisplay();
   }
 
+  /**
+   * Reads an operator
+   * @param {string} operator A character representing an operator
+   */
   readOperator(operator) {
     if (this.currentOperand === "") return;
 
@@ -97,6 +135,11 @@ class Calculator {
     this.#refreshDisplay();
   }
 
+  /**
+   * 
+   * @param {string} symbol A character representing an operand symbol
+   * @returns 
+   */
   readSymbol(symbol) {
     if (symbol === "." && this.currentOperand.includes(".")) return;
 
