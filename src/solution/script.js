@@ -3,7 +3,7 @@
  */
 class Calculator {
   #emitRefresh;
-  
+
   /**
    * Initialises an instance
    * @constructor
@@ -18,7 +18,7 @@ class Calculator {
 
   /**
    * Formats a numeric value for display
-   * @param {number} number 
+   * @param {number} number
    * @returns {string} Formatted value
    * @private
    */
@@ -65,7 +65,7 @@ class Calculator {
    * @private
    */
   #refreshDisplay() {
-    this.#emitRefresh(this.#getDisplayData())
+    this.#emitRefresh(this.#getDisplayData());
   }
 
   /**
@@ -138,9 +138,9 @@ class Calculator {
   }
 
   /**
-   * 
+   *
    * @param {string} symbol A character representing an operand symbol
-   * @returns 
+   * @returns
    */
   readSymbol(symbol) {
     if (symbol === "." && this.currentOperand.includes(".")) return;
@@ -251,7 +251,7 @@ class UI {
   }
 }
 
-new UI({
+const selectors = {
   displayElement: ".display",
   symbolButtons: "[data-role='symbol']",
   operatorButtons: "[data-role='operator']",
@@ -260,6 +260,8 @@ new UI({
   allClearButton: "[data-role='all-clear']",
   previousOperandElement: "[data-role='previous-operand']",
   currentOperandElement: "[data-role='current-operand']",
-});
+};
 
-module.exports = Calculator;
+new UI(selectors);
+
+module.exports = { calculator: Calculator, selectors: selectors };
