@@ -88,7 +88,6 @@ class Calculator {
       case "*":
         result = prev * current;
         break;
-      case "/":
       case "÷":
         result = prev / current;
         break;
@@ -116,8 +115,6 @@ class Calculator {
    * Deletes a symbol from the current operand
    */
   deleteSymbol() {
-    this.currentOperand = this.currentOperand.toString().slice(0, -1);
-    this.#refreshDisplay();
   }
 
   /**
