@@ -2,7 +2,7 @@ This is basic math calculator app built with just HTML, CSS and vanilla JavaScri
 
 You should review the code, then proceed to implement the changes listed below.
 
-Forked and adapted from [Web Dev Simplified](https://github.com/WebDevSimplified)"
+Forked and adapted from [Web Dev Simplified](https://github.com/WebDevSimplified)
 =======
 # Assessment tasks
 
