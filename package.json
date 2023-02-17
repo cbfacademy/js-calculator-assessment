@@ -1,0 +1,23 @@
+{
+  "name": "unit05-assessment-node",
+  "version": "1.0.0",
+  "description": "Create a Todo List RESTful API",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackcodherbootcamp/unit05-assessment-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackcodherbootcamp/unit05-assessment-node/issues"
+  },
+  "homepage": "https://github.com/blackcodherbootcamp/unit05-assessment-node#readme",
+  "scripts": {
+    "test": "mocha 'src/main.js' || TRUE"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}

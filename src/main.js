@@ -2,7 +2,7 @@ var Mocha = require('mocha');
 var mocha = new Mocha({});
 
 // a 'coderbyte-tests' folder is required for unit tests to properly run on our platform
-mocha.addFile('coderbyte-tests/test.js');
+mocha.addFile('./src/coderbyte-tests/test.js');
 
 mocha.run()
   .on('test', function(test) {
